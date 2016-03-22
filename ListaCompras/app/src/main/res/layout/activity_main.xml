@@ -9,8 +9,11 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="android_mini_projects.mstuttgart.github.com.br.listacompras.MainActivity">
 
-    <TextView
+    <ListView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_height="match_parent"
+        android:id="@+id/listaProdutos"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:choiceMode="singleChoice" />
 </RelativeLayout>
