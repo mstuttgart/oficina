@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="@drawable/radial_background"
+    tools:context="flashlight.android_mini_projects.mstuttgart.github.com.br.androidflashlight.MainActivity">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSwitch"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/btn_switch_on"
+        android:layout_marginTop="100dip"
+        android:background="@null"
+        android:contentDescription="@null"/>
+</RelativeLayout>
