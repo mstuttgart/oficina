@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from agenda import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls, name='index'),
+    url(r'^$', views.lista, name='lista'),
+    url(r'^adiciona/$', views.adiciona, name='adiciona'),
+    url(r'^item/(?P<id_item>\d+)/$', views.item, name='item'),
 ]

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block corpo %}
+
+<h1> {{ item.titulo }}</h1>
+<p>{{ item.data|date:'d/m/Y' }} - {{ item.hora }}</p>
+<pre>{{ item.descricao }}</pre>
+
+<p><a href="/"> Voltar para lista </a></p>
+
+{% endblock %}
