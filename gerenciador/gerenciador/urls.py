@@ -15,11 +15,21 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf import settings
+import django
 from agenda import views
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls, name='index'),
     url(r'^$', views.lista, name='lista'),
     url(r'^adiciona/$', views.adiciona, name='adiciona'),
+    url(r'^remove/(?P<id_item>\d+)/$', views.remove, name='remove'),
     url(r'^item/(?P<id_item>\d+)/$', views.item, name='item'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += [
+        url(r'^media/(?P<path>.*)$', django.views.static.serve,
+            {'document_root': settings.MEDIA_URL}),
+    ]

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block corpo %}
+
+<h1> Dados salvos com sucesso!! </h1>
+<h2>{{ item.titulo }}</h2>
+
+<form action="" method="POST">{% csrf_token %}
+  <p><button type="submit">Remover</button> ou <a href="/">Cancelar</a></p>
+</form>
+
+{% endblock %}
