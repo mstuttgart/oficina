@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 {% block corpo %}
 
-<a href="/adiciona/">Adicionar novo item</a>
-
 <ul>
-
+  <li><a href="/logout/">Logout</a></li>
+  <li><a href="/adiciona/">Adicionar novo item</a></li>
+</ul>
+<ul>
+  {% load staticfiles %}
   {% for item in lista_itens %}
     <li>
-      <a href="/remove/{{ item.id }}/"><img src="{{ MEDIA_URL }}imagens/lixeira.png"/></a>
+      <a href="/remove/{{ item.id }}/"><img src="{% static "agenda/lixeira.png" %}" alt="My image"/></a>
       <a href="/item/{{ item.id }}/">
         {{ item.data | date:'d/m/Y'}} - {{ item.titulo }}
       </a>

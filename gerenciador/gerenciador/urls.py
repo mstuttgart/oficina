@@ -16,20 +16,22 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.conf import settings
-import django
-from agenda import views
+from django.contrib.auth import views as django_views
+from agenda import views as agenda_views
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls, name='index'),
-    url(r'^$', views.lista, name='lista'),
-    url(r'^adiciona/$', views.adiciona, name='adiciona'),
-    url(r'^remove/(?P<id_item>\d+)/$', views.remove, name='remove'),
-    url(r'^item/(?P<id_item>\d+)/$', views.item, name='item'),
+    url(r'^$', agenda_views.lista, name='lista'),
+    url(r'^adiciona/$', agenda_views.adiciona, name='adiciona'),
+    url(r'^remove/(?P<id_item>\d+)/$', agenda_views.remove, name='remove'),
+    url(r'^item/(?P<id_item>\d+)/$', agenda_views.item, name='item'),
+    url(r'^login/$', django_views.login, {'template_name': "login.html"}),
+    url(r'^logout/$', django_views.logout_then_login, {'login_url': '/login/'}),
 ]
 
-if settings.DEBUG:
-    urlpatterns += [
-        url(r'^media/(?P<path>.*)$', django.views.static.serve,
-            {'document_root': settings.MEDIA_URL}),
-    ]
+# if settings.DEBUG:
+#     urlpatterns += [
+#         url(r'^media/(?P<path>.*)$', django.views.static.server,
+#             {'document_root': settings.MEDIA_URL}),
+#     ]
