@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block corpo %}
+
+{% if form.errors %}
+{{ form.non_field_errors }}
+{% endif %}
+
+<form action="." method="post">
+  {% csrf_token %}
+  <table>
+    <tr>
+      <td>
+        {{ form.username.label_tag }}
+      </td>
+      <td>
+        {{ form.username }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{ form.password.label_tag }}
+      </td>
+      <td>
+        {{ form.password }}
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button type="submit">Login</button>
+      </td>
+    </tr>
+  </table>
+</form>
+
+
+
+{% endblock %}
