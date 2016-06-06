@@ -12,6 +12,7 @@ class ItemAgenda(models.Model):
     hora = models.TimeField()
     descricao = models.TextField()
     usuario = models.ForeignKey(User)
+    participante = ManyToManyFields(User, related_name='item_participantes')  
 
     def __unicode__(self):
         return '%s - %s %s' % (self.titulo, self.data, self.hora)
