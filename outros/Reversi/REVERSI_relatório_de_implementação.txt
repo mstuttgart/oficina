@@ -1,0 +1,92 @@
+REVERSI_1.0
+
+- Implementação de tabuleiro pronta;
+
+- Verificação de valisade de jogada pronta;
+
+- Verificação de término de jogo e impossibilidade de jogo para os dois jogadores 
+(se ambos os jogadores não tiverem jogadas, o jogo deve terminar) - a implementar;
+
+- Contagem de peças no tabuleiro para buscar vencedor e verificar se tabuleiro está completo - a implementar;
+
+- Disponibilidade do tabuleiro na tela implica em tabuleiros 10x10 ou menor - a implementar;
+
+
+REVERSI_1.1
+
+- Implementação de verificação de possibilidade de jogada para jogador 1 e 2 implementado;
+
+- Modo dois jogadores completo;
+
+- Disponibilidade do tabuleiro na tela implica em tabuleiros 10x10 ou menor - a implementar;
+
+- Controle da posição da peça através do uso do direcional do teclado, evitando a digitação de coordenadas. Implementar para modo de um e dois
+jogadores - a implementar;
+
+- Buscar melhoria visual da tela de jogo e do tabuleiro - a implementar;
+
+-  Modo de um jogador (vs CPU) a implementar;
+
+
+REVERSI_1.2
+
+- Implementação do modo de um jogador (vs CPU); 
+
+- Modo seleção de cursor semi-completa - implementado;
+
+REVERSI_1.3
+
+- Implementação do modo de um jogador;
+
+- Implementação do menu;
+
+- Menu do jogo a implementar;
+
+- Implementar nível de dificuldade NORMAL (o computador escolhe a melhor jogada) e GOOD LUCKY (a ordem de jogada é aleatória,
+podendo ocorrer de um jogador jogar duas ou mais vezes);
+
+- BUG na verificação de jogadas possíveis;
+
+- Direcionais diferenciados para jogador 1 e 2 - implementado;
+
+REVERSI_1.3
+
+- modo um jogador implementado;
+
+- implementar menu;
+
+- implementar logotipo;
+
+- implementar trilha;
+
+- Implementar nível de dificuldade NORMAL (o computador escolhe a melhor jogada) e GOOD LUCKY (a ordem de jogada é aleatória,
+podendo ocorrer de um jogador jogar duas ou mais vezes);
+
+- BUG na verificação de jogadas possíveis;
+
+- melhorias visuais - implementar;
+
+- editar o menu de ajuda
+
+REVERSI_1.4
+
+- modo um jogador implementado;
+
+- menu implementado;
+
+- implementar logotipo;
+
+- implementar trilha;
+
+- Implementar nível de dificuldade NORMAL (o computador escolhe a melhor jogada) e GOOD LUCKY (a ordem de jogada é aleatória,
+podendo ocorrer de um jogador jogar duas ou mais vezes);
+
+- BUG na verificação de jogadas possíveis;
+
+- melhorias visuais - implementar;
+
+- editar o menu de ajuda
+
+- relacionar opções do menu de opções e passar a dificuldade e tamanho do tabuleiro para a função principal;
+
+- implementar uma lista dinâmica encadeada para guardar a pontuação dos jogadores
