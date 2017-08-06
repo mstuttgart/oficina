@@ -1,0 +1,46 @@
+{% block title %} CRUD de Livros {% endblock title %}
+{% block top %} CRUD de Livros {% endblock top %}
+
+<form action="{% url 'book.save' %}" method="post">
+    {% csrf_token %}
+    {{ library_form.as_p }}
+
+    <button type="submit">Salvar</button>
+
+</form>
+
+{% block body %}
+
+<table border="1px">
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Status</th>
+            <th>Descrição</th>
+            <th>Amigo</th>
+            <th>Email</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for book in book_list %}
+            <tr>
+                <td>{{ book.title }}</td>
+                <td>{{ book.description | truncatechars:20 }}</td>
+                <td>{% if book.status %} Sim {% else %} Não {% endif %}</td>
+                <td>{% if book.status %} Sim {% else %} Não {% endif %}</td>
+                <td>{{ book.friend_name }}</td>
+                <td>{{ book.friend_email }}</td>
+                <td>
+                    <a href="/library/edit/{{ book.id }}">Editar</a> | <a
+                        href="/library/remove/{{ book.id }}">Excluir</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+
+{% endblock body %}
+
+{% block footer %} Todos os direitos reservados {% endblock footer %}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" charset="UTF-8">
+    <head>
+        <meta charset="UTF-8" http-equiv="Content-Type"
+              content="text/html; charset=utf-8">
+        <title>{% block title %} Titulo da pagina{% endblock title %}</title>
+    </head>
+    <h1>{% block top %} Topo da pagina {% endblock top %}</h1>
+    <body>
+        {% block body %}
+             <h1>Corpo da pagina</h1>
+        {% endblock body %}
+    </body>
+    <hr/>
+    <footer>{% block footer %} Rodape da pagina {% endblock footer %}</footer>
+</html>
