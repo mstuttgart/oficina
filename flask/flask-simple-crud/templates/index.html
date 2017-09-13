@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Book Library</title>
+    </head>
+    <body>
+    <header>
+        <div>
+            <h1 class="logo">Bool Library Flask</h1>
+            <hr>
+        </div>
+    </header>
+    Books (<a href="/add">add Book</a>)
+    <br>
+    <br>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in books %}
+                <tr>
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.description }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    </body>
+</html>
