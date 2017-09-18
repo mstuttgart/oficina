@@ -62,6 +62,7 @@ if __name__ == '__main__':
         # Pintamos a tela de branco
         screen.fill((255, 255, 255))
 
+	# Desenha sprite
         sprite.draw(surface=screen, cell_index=index, x=x, y=y)
 
         # Atualizamos oi display
