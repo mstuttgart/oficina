@@ -27,9 +27,6 @@ class Vetor:
         v = Vetor(x0, y0)
         return v.calcula_vetor_unitario()
 
-
-
-
 class Personagem:
 
     def __init__(self, position):
