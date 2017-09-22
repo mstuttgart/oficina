@@ -1,0 +1,27 @@
+<html>
+
+    <head>
+      {% if title %}
+        <title>{{ title }} - microblogging</title>
+      {% else %}
+        <title>Welcome to microblogging</title>
+      {% endif %}
+    </head>
+
+    <body>
+      <div>Microblog: <a href="/index">Home</a></div>
+      <hr>
+        {% with messages = get_flashed_messages() %}
+          <ul>
+            {% if messages %}
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            {% endif %}
+          </ul>
+        {% endwith %}
+        {% block content%}{% endblock %}
+      </hr>
+    </body>
+
+</html>
