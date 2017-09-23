@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Add Book{% endblock %}
+{% block body %}
+<form action="{{ request.path }}" method="POST">
+    <label>Title</label>
+    <br>
+    <input name="title"/>
+    <br>
+    <label>Description</label>
+    <br>
+    <textarea name="description"></textarea>
+    <br>
+    <input type="submit" value="Add"/>
+
+    <br><br>
+    <a href="/">Voltar</a>
+
+    <br><br>
+</form>
+{% endblock %}

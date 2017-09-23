@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block body %}
+  <div class="table table-striped">
+    <ul>
+      {% for book in books %}
+      <li class="col-xs-12" style="padding: 10px">
+          <div class="col-xs-3">{{ book.title }}</div>
+          <!-- <div class="col-xs-3">{{ book.year }}</div> -->
+          <!-- <div class="col-xs-3">{{ book.description }}</div> -->
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
