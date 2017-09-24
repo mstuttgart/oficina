@@ -1,15 +1,37 @@
 {% extends 'base.html' %}
+{% from 'macros.html' import icon %}
 {% block title %}Home{% endblock %}
-{% block body %}
-  <div class="table table-striped">
-    <ul>
-      {% for book in books %}
-      <li class="col-xs-12" style="padding: 10px">
-          <div class="col-xs-3">{{ book.title }}</div>
-          <!-- <div class="col-xs-3">{{ book.year }}</div> -->
-          <!-- <div class="col-xs-3">{{ book.description }}</div> -->
-      </li>
-      {% endfor %}
-    </ul>
+{% block content %}
+<div class="row">
+  <div class="col-md-12">
+    <h3 class="lead">Books</h3>
+    <table id="book-table" class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Year</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          {% for book in books %}
+          <tr>
+            <td>{{ book.id }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.year }}</td>
+            <td>{{ book.description }}</td>
+            <td>
+              <a class="btn btn-xs btn-default" href="{{ url_for('update_book', book_id=book.id) }}">Edit</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tr>
+      </tbody>
+    </table>
   </div>
+
+</div>
+
 {% endblock %}
