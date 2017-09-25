@@ -29,7 +29,7 @@ def add_book():
 @app.route('/edit/book/<int:book_id>', methods=['GET', 'POST'])
 def edit_book(book_id):
     book = models.Book.query.get_or_404(book_id)
-    form = forms.BookForm(request.form)
+    form = forms.BookForm(obj=book)
 
     if form.validate_on_submit():
         book.title = form.title.data
@@ -39,7 +39,12 @@ def edit_book(book_id):
         flash('You have successfully edited the book.')
         return redirect('/')
     else:
-        form.title.data = book.title
-        form.year.data = book.year
-        form.description.data = book.description
         return render_template('book.html', form=form, add_book=False)
+
+@app.route('/delete/book/<int:book_id>', methods=['GET', 'POST'])
+def delete_book(book_id):
+    book = models.Book.query.get_or_404(book_id)
+    db.session.delete(book)
+    db.session.commit()
+    flash('You have successfully deleted the book.')
+    return redirect('/')
