@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}Add Book{% endblock %}
+{% block title %}Edit Book{% endblock %}
 {% block content %}
 
 {% for message in form.title.errors %}
@@ -7,27 +7,26 @@
       {{ message }}
     </div>
 {% endfor %}
-
-<form action="{{ request.path }}" class="form-horizontal" method="POST">
+<form action="" class="form-horizontal" method="POST">
   <fieldset>
-    <legend>Add New Book</legend>
-    <input type="hidden" id="csrf_token" name="csrf_token">
+    <legend>Edit Book</legend>
+    {{ form.hidden_tag() }}
     <div class="form-group">
       <label for="title" class="col-lg-2 control-label">Title</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" id="title" name="title" placeholder="Book Title">
+        {{ form.title(class="form-control") }}
       </div>
     </div>
     <div class="form-group">
       <label for="year" class="col-lg-2 control-label">Year</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" id="year" name="year" placeholder="Publish Year">
+        {{ form.year(class="form-control") }}
       </div>
     </div>
     <div class="form-group">
       <label for="description" class="col-lg-2 control-label">Description</label>
       <div class="col-lg-10">
-        <textarea class="form-control" rows="3" id="description" name="description"></textarea>
+        {{ form.description(class="form-control") }}
       </div>
     </div>
     <div class="form-group">
