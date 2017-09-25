@@ -22,12 +22,12 @@ def add_book():
             return redirect('/')
         else:
             flash('Title field is required', 'error')
-            return render_template('add-book.html', form=form)
+            return render_template('book.html', form=form, add_book=True)
     else:
-        return render_template('add-book.html', form=form)
+        return render_template('book.html', form=form, add_book=True)
 
-@app.route('/edit/<int:book_id>', methods=['GET', 'POST'])
-def update_book(book_id):
+@app.route('/edit/book/<int:book_id>', methods=['GET', 'POST'])
+def edit_book(book_id):
     book = models.Book.query.get_or_404(book_id)
     form = forms.BookForm(request.form)
 
@@ -42,13 +42,4 @@ def update_book(book_id):
         form.title.data = book.title
         form.year.data = book.year
         form.description.data = book.description
-        return render_template('update-book.html', form=form)
-
-    # if request.method == 'POST':
-    #     book.title = request.form['title']
-    #     book.year = request.form['year']
-    #     book.description = request.form['description']
-    #     db.session.commit()
-    #     return redirect('/')
-    # else:
-    #     return render_template('update-book.html')
+        return render_template('book.html', form=form, add_book=False)

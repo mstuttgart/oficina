@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
-{% block title %}Edit Book{% endblock %}
+{% block title %}
+{% if add_book %}
+    Add New Book
+{% else %}
+    Edit Book
+{% endif %}
+{% endblock %}
 {% block content %}
 
 {% for message in form.title.errors %}
@@ -7,9 +13,14 @@
       {{ message }}
     </div>
 {% endfor %}
-<form action="" class="form-horizontal" method="POST">
+
+<form action="{{ request.path }}" class="form-horizontal" method="POST">
   <fieldset>
-    <legend>Edit Book</legend>
+    {% if add_book %}
+        <legend>Add New Book</legend>
+    {% else %}
+        <legend>Edit Book</legend>
+    {% endif %}
     {{ form.hidden_tag() }}
     <div class="form-group">
       <label for="title" class="col-lg-2 control-label">Title</label>
