@@ -1,50 +1,57 @@
 {% extends 'base.html' %}
 {% block title %}
 {% if add_book %}
-    Add New Book
+Add New Book
 {% else %}
-    Edit Book
+Edit Book
 {% endif %}
 {% endblock %}
 {% block content %}
 
 {% for message in form.title.errors %}
-    <div class="alert alert-danger">
-      {{ message }}
-    </div>
+<div class="alert alert-danger">
+    {{ message }}
+</div>
 {% endfor %}
 
 <form action="{{ request.path }}" class="form-horizontal" method="POST">
-  <fieldset>
-    {% if add_book %}
+    <fieldset>
+        {% if add_book %}
         <legend>Add New Book</legend>
-    {% else %}
+        {% else %}
         <legend>Edit Book</legend>
-    {% endif %}
-    {{ form.hidden_tag() }}
-    <div class="form-group">
-      <label for="title" class="col-lg-2 control-label">Title</label>
-      <div class="col-lg-10">
-        {{ form.title(class="form-control") }}
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="year" class="col-lg-2 control-label">Year</label>
-      <div class="col-lg-10">
-        {{ form.year(class="form-control") }}
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="description" class="col-lg-2 control-label">Description</label>
-      <div class="col-lg-10">
-        {{ form.description(class="form-control") }}
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-lg-10 col-lg-offset-2">
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-    </div>
-  </fieldset>
+        {% endif %}
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            <label for="title" class="col-lg-2 control-label">Title</label>
+            <div class="col-lg-10">
+                {{ form.title(class="form-control") }}
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="author" class="col-lg-2 control-label">Author</label>
+            <div class="col-lg-10">
+                {{ form.author(class="form-control") }}
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="year" class="col-lg-2 control-label">Year</label>
+            <div class="col-lg-10">
+                {{ form.year(class="form-control") }}
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="description"
+                   class="col-lg-2 control-label">Description</label>
+            <div class="col-lg-10">
+                {{ form.description(class="form-control") }}
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </fieldset>
 </form>
 {% endblock %}

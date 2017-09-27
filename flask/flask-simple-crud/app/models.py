@@ -7,14 +7,17 @@ class Book(db.Model):
     """
     __tablename__ = 'books'
 
-    id = db.Column(db.Integer, primary_key=True)
-    author_id = db.Column(db.Integer, db.ForeignKey('authors.id'))
-    title = db.Column(db.String(60), unique=True)
-    year = db.Column(db.Integer)
+    id = db.Column('id', db.Integer, primary_key=True)
+    author_id = db.Column('author_id', db.Integer, db.ForeignKey('authors.id'))
+    title = db.Column('title', db.String(60), unique=True)
+    year = db.Column('year', db.Integer)
     description = db.Column(db.Text)
+
+    author = db.relationship('Author', foreign_keys=author_id)
 
     def __repr__(self):
         return '<Book {}>'.format(self.title)
+
 
 class Author(db.Model):
     """
@@ -24,7 +27,7 @@ class Author(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
-    books = db.relationship('Book', backref='author', lazy='dynamic')
+    # books = db.relationship('Book', backref='author', lazy='dynamic')
 
     def __repr__(self):
         return '<Author {}>'.format(self.name)

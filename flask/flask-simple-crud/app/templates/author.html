@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %}
+{% if add_author %}
+Add New Author
+{% else %}
+Edit Author
+{% endif %}
+{% endblock %}
+{% block content %}
+
+{% for message in form.name.errors %}
+<div class="alert alert-danger">
+    {{ message }}
+</div>
+{% endfor %}
+
+<form action="{{ request.path }}" class="form-horizontal" method="POST">
+    <fieldset>
+        {% if add_author %}
+        <legend>Add New Author</legend>
+        {% else %}
+        <legend>Edit Author</legend>
+        {% endif %}
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            <label class="col-lg-2 control-label">Name</label>
+            <div class="col-lg-10">
+                {{ form.name(class="form-control") }}
+            </div>
+        </div>
+
+        <!--<table>-->
+            <!--<thead>-->
+            <!--<tr>-->
+                <!--<th>#</th>-->
+                <!--<th>Title</th>-->
+                <!--<th>Author</th>-->
+                <!--<th>Year</th>-->
+                <!--<th>Description</th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<tr>-->
+                <!--{% for book in books %}-->
+            <!--<tr>-->
+                <!--<td>{{ book.id }}</td>-->
+                <!--<td>{{ book.name }}</td>-->
+                <!--<td>{{ book.year }}</td>-->
+                <!--<td>{{ book.description }}</td>-->
+            <!--</tr>-->
+            <!--{% endfor %}-->
+            <!--</tbody>-->
+        <!--</table>-->
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+{% endblock %}

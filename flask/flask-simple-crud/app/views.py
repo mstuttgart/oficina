@@ -1,30 +1,43 @@
-from flask import render_template, request, redirect, flash
+from flask import render_template, redirect, flash, url_for, request
 
 from app import app, models, forms, db
+
 
 @app.route('/')
 def index():
     books = models.Book.query.all()
     return render_template('index.html', books=books)
 
-@app.route('/add-book', methods=['GET', 'POST'])
+
+@app.route('/add/book', methods=['GET', 'POST'])
 def add_book():
     form = forms.BookForm()
 
-    if request.method == 'POST':
-        if form.validate():
-            book = models.Book()
-            book.title = request.form['title']
-            book.year = request.form['year']
-            book.description = request.form['description']
-            db.session.add(book)
-            db.session.commit()
-            return redirect('/')
-        else:
+    if form.validate_on_submit():
+
+        book = models.Book()
+        book.title = form.title.data
+        book.author = form.author.data
+        book.year = form.year.data
+        book.description = form.description.data
+
+        if not form.validate():
             flash('Title field is required', 'error')
             return render_template('book.html', form=form, add_book=True)
+
+        try:
+            db.session.add(book)
+            db.session.commit()
+            flash('You have successfully added a new book.')
+        except:
+            # in case book name already exists
+            flash('Error: Book name already exists.')
+
+        return redirect(url_for('index'))
+
     else:
         return render_template('book.html', form=form, add_book=True)
+
 
 @app.route('/edit/book/<int:book_id>', methods=['GET', 'POST'])
 def edit_book(book_id):
@@ -33,13 +46,22 @@ def edit_book(book_id):
 
     if form.validate_on_submit():
         book.title = form.title.data
+        book.author = form.author.data
         book.year = form.year.data
         book.description = form.description.data
-        db.session.commit()
-        flash('You have successfully edited the book.')
-        return redirect('/')
+
+        try:
+            db.session.commit()
+            flash('You have successfully edited the book.')
+        except:
+            # in case book name already exists
+            flash('Error: Book name already exists.')
+
+        return redirect(url_for('index'))
+
     else:
         return render_template('book.html', form=form, add_book=False)
+
 
 @app.route('/delete/book/<int:book_id>', methods=['GET', 'POST'])
 def delete_book(book_id):
@@ -47,4 +69,35 @@ def delete_book(book_id):
     db.session.delete(book)
     db.session.commit()
     flash('You have successfully deleted the book.')
-    return redirect('/')
+    return redirect(url_for('index'))
+
+
+@app.route('/add/author', methods=['GET', 'POST'])
+def add_author():
+
+    form = forms.AuthorForm()
+
+    if form.validate_on_submit():
+
+        author = models.Author()
+        author.name = form.name.data
+        db.session.add(author)
+        db.session.commit()
+
+        if not form.validate():
+            flash('Name field is required', 'error')
+            return render_template('author.html', form=form, add_author=True)
+
+        try:
+            db.session.add(author)
+            db.session.commit()
+            flash('You have successfully added a new author.')
+        except:
+            # in case author name already exists
+            flash('Error: Author name already exists.')
+
+        return redirect(url_for('index'))
+    else:
+        return render_template('author.html', form=form, add_author=True)
+
+
