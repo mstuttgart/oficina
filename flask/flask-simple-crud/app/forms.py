@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, IntegerField, TextAreaField, SubmitField
+from wtforms import StringField, IntegerField, TextAreaField, FileField
 from wtforms import validators, ValidationError
 from wtforms.ext.sqlalchemy.fields import QuerySelectField
 
@@ -16,6 +16,7 @@ class BookForm(FlaskForm):
                               get_label=lambda a: a.name)
     year = IntegerField('Year')
     description = TextAreaField('Description')
+    cover = FileField()
 
 
 class AuthorForm(FlaskForm):

@@ -14,7 +14,7 @@ Edit Book
 </div>
 {% endfor %}
 
-<form action="{{ request.path }}" class="form-horizontal" method="POST">
+<form action="{{ request.path }}" class="form-horizontal" enctype="multipart/form-data" method="POST">
     <fieldset>
         {% if add_book %}
         <legend>Add New Book</legend>
@@ -22,6 +22,13 @@ Edit Book
         <legend>Edit Book</legend>
         {% endif %}
         {{ form.hidden_tag() }}
+        <div class="form-group">
+            <label for="cover" class="col-lg-2 control-label">Cover</label>
+            <div class="col-lg-10">
+                <!--<img src="" alt="">-->
+                {{ form.cover(class="form-control") }}
+            </div>
+        </div>
         <div class="form-group">
             <label for="title" class="col-lg-2 control-label">Title</label>
             <div class="col-lg-10">

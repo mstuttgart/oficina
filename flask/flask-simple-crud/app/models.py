@@ -1,6 +1,14 @@
 from app import db
 
 
+class User(db.Model):
+
+    __tablemame__ = 'users'
+
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(64))
+
+
 class Book(db.Model):
     """
     Create a comic collection table
@@ -12,6 +20,7 @@ class Book(db.Model):
     title = db.Column('title', db.String(60), unique=True)
     year = db.Column('year', db.Integer)
     description = db.Column(db.Text)
+    cover_path = db.Column(db.String)
 
     author = db.relationship('Author', foreign_keys=author_id)
 

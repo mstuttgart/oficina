@@ -1,6 +1,10 @@
-from flask import render_template, redirect, flash, url_for, request
+from flask import render_template, redirect, flash, url_for, request, send_from_directory
+from werkzeug.utils import secure_filename
+import os
 
 from app import app, models, forms, db
+
+MEDIA_FOLDER = 'app/static/'
 
 
 @app.route('/')
@@ -45,10 +49,19 @@ def edit_book(book_id):
     form = forms.BookForm(obj=book)
 
     if form.validate_on_submit():
+
+        cover = form.cover.data
+        filename = secure_filename(cover.filename)
+        path = os.path.abspath(MEDIA_FOLDER)
+        path = os.path.join(path, filename)
+        # path = os.path.join(url_for('static', filename=''), filename)
+        cover.save(path)
+
         book.title = form.title.data
         book.author = form.author.data
         book.year = form.year.data
         book.description = form.description.data
+        book.cover_path = filename
 
         try:
             db.session.commit()
@@ -70,6 +83,11 @@ def delete_book(book_id):
     db.session.commit()
     flash('You have successfully deleted the book.')
     return redirect(url_for('index'))
+
+
+@app.route('/img/<path:filename>')
+def download_file(filename):
+    return send_from_directory(MEDIA_FOLDER, filename)
 
 
 @app.route('/add/author', methods=['GET', 'POST'])
