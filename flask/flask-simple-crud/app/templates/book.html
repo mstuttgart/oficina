@@ -14,7 +14,8 @@ Edit Book
 </div>
 {% endfor %}
 
-<form action="{{ request.path }}" class="form-horizontal" enctype="multipart/form-data" method="POST">
+<form action="{{ request.path }}" class="form-horizontal"
+      enctype="multipart/form-data" method="POST">
     <fieldset>
         {% if add_book %}
         <legend>Add New Book</legend>
@@ -23,42 +24,47 @@ Edit Book
         {% endif %}
         {{ form.hidden_tag() }}
         <div class="form-group">
-            <label for="cover" class="col-lg-2 control-label">Cover</label>
-            <div class="col-lg-10">
-                <!--<img src="" alt="">-->
-                {{ form.cover(class="form-control") }}
+            <!--<label class="col-lg-2 control-label">Cover</label>-->
+            <div class="col-lg-2">
+                <a class="thumbnail thumbnail-button" href="#">
+                    <img src="{{ url_for('static', filename='%s' % form.cover_path.data) }}">
+                </a>
+                {{ form.cover(class="form-control btn btn-primary") }}
+            </div>
+            <div class="col-lg-8">
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Title</label>
+                    <div class="col-lg-10">
+                        {{ form.title(class="form-control") }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Author</label>
+                    <div class="col-lg-10">
+                        {{ form.author(class="form-control") }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Year</label>
+                    <div class="col-lg-10">
+                        {{ form.year(class="form-control") }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Description</label>
+                    <div class="col-lg-10" style="">
+                        {{ form.description(class="form-control", rows="10") }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button type="submit" class="btn btn-primary">Submit
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="form-group">
-            <label for="title" class="col-lg-2 control-label">Title</label>
-            <div class="col-lg-10">
-                {{ form.title(class="form-control") }}
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="author" class="col-lg-2 control-label">Author</label>
-            <div class="col-lg-10">
-                {{ form.author(class="form-control") }}
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="year" class="col-lg-2 control-label">Year</label>
-            <div class="col-lg-10">
-                {{ form.year(class="form-control") }}
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="description"
-                   class="col-lg-2 control-label">Description</label>
-            <div class="col-lg-10">
-                {{ form.description(class="form-control") }}
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-lg-10 col-lg-offset-2">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </div>
+
     </fieldset>
 </form>
 {% endblock %}

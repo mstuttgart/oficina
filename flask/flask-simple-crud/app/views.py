@@ -19,11 +19,18 @@ def add_book():
 
     if form.validate_on_submit():
 
+        cover = form.cover.data
+        filename = secure_filename(cover.filename)
+        path = os.path.abspath(MEDIA_FOLDER)
+        path = os.path.join(path, filename)
+        cover.save(path)
+
         book = models.Book()
         book.title = form.title.data
         book.author = form.author.data
         book.year = form.year.data
         book.description = form.description.data
+        book.cover_path = filename
 
         if not form.validate():
             flash('Title field is required', 'error')
@@ -50,18 +57,18 @@ def edit_book(book_id):
 
     if form.validate_on_submit():
 
-        cover = form.cover.data
-        filename = secure_filename(cover.filename)
-        path = os.path.abspath(MEDIA_FOLDER)
-        path = os.path.join(path, filename)
-        # path = os.path.join(url_for('static', filename=''), filename)
-        cover.save(path)
+        if form.cover.data.filename:
+            cover = form.cover.data
+            filename = secure_filename(cover.filename)
+            path = os.path.abspath(MEDIA_FOLDER)
+            path = os.path.join(path, filename)
+            cover.save(path)
+            book.cover_path = filename
 
         book.title = form.title.data
         book.author = form.author.data
         book.year = form.year.data
         book.description = form.description.data
-        book.cover_path = filename
 
         try:
             db.session.commit()

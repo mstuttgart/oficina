@@ -13,10 +13,13 @@ class BookForm(FlaskForm):
                               allow_blank=True,
                               get_pk=lambda a: a.id,
                               blank_text='',
-                              get_label=lambda a: a.name)
+                              get_label=lambda a: a.name,
+                              validators=[validators.DataRequired(
+                                  'Please, select the book author')])
     year = IntegerField('Year')
     description = TextAreaField('Description')
     cover = FileField()
+    cover_path = StringField()
 
 
 class AuthorForm(FlaskForm):
