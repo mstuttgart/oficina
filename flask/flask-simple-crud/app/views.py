@@ -9,7 +9,7 @@ MEDIA_FOLDER = 'app/static/'
 
 @app.route('/')
 def index():
-    books = models.Book.query.all()
+    books = models.Book.query.order_by(models.Book.title).all()
     return render_template('index.html', books=books)
 
 
