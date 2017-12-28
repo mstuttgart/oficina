@@ -1,6 +1,6 @@
 # Mini Projetos de Estudo
 
-Projetos feitos para propósito de estudo. Alguns códigos foram feitos durante o começo da minha graduação. 
+Projetos feitos com propósito de estudo. Alguns códigos foram feitos durante o começo da minha graduação. 
 
 * android: projetos usando Android SDK.
 * django: Projetos usando framework web Django
