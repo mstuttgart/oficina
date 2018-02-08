@@ -1,0 +1,11 @@
+{
+    "python.unitTest.unittestArgs": [
+        "-v",
+        "-s",
+        "./cap_02",
+        "-p",
+        "test_*.py"
+    ],
+    "python.unitTest.unittestEnabled": true,
+    "python.pythonPath": "/home/michell/.pyenv/versions/env-ca-flask-tutorial/bin/python"
+}
