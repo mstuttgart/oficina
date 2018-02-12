@@ -1,4 +1,4 @@
-from app import app
+from my_note import app
     
 
 if __name__ == '__main__':

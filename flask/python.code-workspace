@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "tutorial-flask"
+		},
+		{
+			"path": "flask-simple-crud"
+		}
+	],
+	"settings": {}
+}

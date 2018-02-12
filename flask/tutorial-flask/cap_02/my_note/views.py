@@ -1,6 +1,6 @@
 from flask import render_template
 
-from . import app
+from my_note import app
 
 
 @app.route('/')

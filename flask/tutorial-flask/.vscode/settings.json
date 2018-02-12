@@ -6,6 +6,9 @@
         "-p",
         "test_*.py"
     ],
-    "python.unitTest.unittestEnabled": true,
-    "python.pythonPath": "/home/michell/.pyenv/versions/env-ca-flask-tutorial/bin/python"
+    "python.unitTest.unittestEnabled": false,
+    "python.pythonPath": "/home/michell/.pyenv/versions/env-ca-flask-tutorial/bin/python",
+    "python.unitTest.promptToConfigure": false,
+    "python.unitTest.pyTestEnabled": false,
+    "python.unitTest.nosetestsEnabled": false
 }

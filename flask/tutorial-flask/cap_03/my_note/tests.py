@@ -3,7 +3,7 @@ import unittest
 from flask import abort, url_for
 from flask_testing import TestCase
 
-from app import app
+from my_note import app
 
 
 class BasicTest(unittest.TestCase):
