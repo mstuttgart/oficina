@@ -1,9 +1,26 @@
 # Meu Plano de Estudos
 
-<div align="center">
+<p align="center">
+<a name="top" href="https://github.com/mstuttgart/plano-de-estudos"><img src="./img/tux.png"></a>
+</p>
 
-![](./img/tux.png)
-</div>
+<p align="center">
+<b><a href="#introducao">Introdução</a></b>
+|
+<b><a href="#conteúdo">Conteúdo</a></b>
+|
+<b><a href="#roadmap">Roadmap</a></b>
+|
+<b><a href="#tarefas">Tarefas</a></b>
+|
+<b><a href="#projetos">Projetos</a></b>
+|
+<b><a href="#créditos">Créditos</a></b>
+</p>
+
+<br>
+
+## Introdução
 
 Este repositório contem projetos de teste desenvolvidos durante meus estudos. Estes projetos podem ser utilizados livremente, contudo nenhum deles está em um nível apropriado para ser utilizado em ambiente de produção.
 
@@ -19,6 +36,10 @@ Alguns códigos foram feitos durante o começo da minha graduação.
 * [J2ME](https://github.com/mstuttgart/plano-de-estudos/tree/master/j2me): projetos usando J2ME. Antigo SDK utilizado para programação de apps em celulares symbiam.
 * [Java](https://github.com/mstuttgart/plano-de-estudos/tree/master/java): projetos avulsos desenvolvidos em Java.
 * [PyGame](https://github.com/mstuttgart/plano-de-estudos/tree/master/pygame): amostras de código utilizando o PyGame.
+
+## Roadmap
+
+Como guia de estudos, estou utilizando o excelente *roadmap* disponível [aqui](https://github.com/kamranahmedse/developer-roadmap). Eu também adicionei em meus estudos livros sobre desenvolvimento pessoal (principalmente aqueles focados em desenvolvimento de software) e livros de literaruta comuns (afinal, ninguém é de ferro :smile:). O outros assuntos mais específicos como emulação, compactação, compiladores e linguagens de programação, também estão em meu *roadmap*.
 
 ## Tarefas
 
