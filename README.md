@@ -19,7 +19,7 @@ Alguns códigos foram feitos durante o começo da minha graduação.
 
 Este repositório tambem possui [issues](https://github.com/mstuttgart/plano-de-estudos/issues) relacionadas as tarefas do meu plano de estudos (cursos, livros, projetos "de estimação", blog e etc), para fins de organização. 
 
-![](labels)
+![](https://github.com/mstuttgart/plano-de-estudos/blob/master/labels.png)
 
 ## Projetos
 
