@@ -26,14 +26,16 @@ Este repositório contem projetos de teste desenvolvidos durante meus estudos. E
 
 Alguns códigos foram feitos durante o começo da minha graduação. 
 
-* [Android](https://github.com/mstuttgart/plano-de-estudos/tree/master/android): projetos usando Android SDK.
-* [Cpp](https://github.com/mstuttgart/plano-de-estudos/tree/master/c%2B%2B): projetos desenvolvidos em C e C++. A grande maioria foi desenvolvida durante meus anos de faculdade.
-* [Django](https://github.com/mstuttgart/plano-de-estudos/tree/master/django): projetos usando framework web Django.
-* [Elixir](https://github.com/mstuttgart/plano-de-estudos/tree/master/elixir): códigos desenvolvidos utilizando a linguagem Elixir.
-* [Flask](https://github.com/mstuttgart/plano-de-estudos/tree/master/flask): projetos usando o framework web Flask.
-* [J2ME](https://github.com/mstuttgart/plano-de-estudos/tree/master/j2me): projetos usando J2ME. Antigo SDK utilizado para programação de apps em celulares symbiam.
-* [Java](https://github.com/mstuttgart/plano-de-estudos/tree/master/java): projetos avulsos desenvolvidos em Java.
-* [PyGame](https://github.com/mstuttgart/plano-de-estudos/tree/master/pygame): amostras de código utilizando o PyGame.
+| Title               | Description                                          |
+| :------------------ | :--------------------------------------------------- |
+| [Android](android/) | projetos usando Android SDK.                         |
+| [Cpp](cpp/)         | projetos desenvolvidos em C e C++.                   |
+| [Django](django/)   | projetos usando framework web Django.                |
+| [Elixir](elixir/)   | códigos desenvolvidos utilizando a linguagem Elixir. |
+| [Flask](flask/)     | projetos usando o framework web Flask.               |
+| [J2ME](j2me/)       | projetos usando J2ME.                                |
+| [Java](java/)       | projetos avulsos desenvolvidos em Java.              |
+| [PyGame](pygame/)   | amostras de código utilizando o PyGame.              |
 
 ## Roadmap
 
