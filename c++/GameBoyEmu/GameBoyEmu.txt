@@ -1,1 +1,0 @@
-./Debug/main.cpp.o ./Debug/game_boy_cpu.cpp.o ./Debug/ludic_audio.cpp.o ./Debug/ludic_mouse_manager.cpp.o
