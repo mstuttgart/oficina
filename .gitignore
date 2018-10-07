@@ -95,3 +95,6 @@ target/
 
 # sqlite db
 *.db
+
+.python-version
+.vscode/
