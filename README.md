@@ -1,7 +1,7 @@
 # Meu Plano de Estudos
 
 <p align="center">
-<a name="top" href="https://github.com/mstuttgart/plano-de-estudos"><img src="./img/tux.png"></a>
+<a name="top" href="https://github.com/mstuttgart/plano-de-estudos"><img src="./.img/tux.png"></a>
 </p>
 
 <p align="center">
@@ -45,13 +45,16 @@ Como guia de estudos, estou utilizando o excelente *roadmap* disponível [aqui](
 
 Este repositório tambem possui [issues](https://github.com/mstuttgart/plano-de-estudos/issues) relacionadas as tarefas do meu plano de estudos (cursos, livros, projetos "de estimação", blog e etc), para fins de organização. 
 
-![](./img/labels.png)
+| Categoria              | Projeto                |         Status          |
+| :---------------------:|:----------------------:|:-----------------------:|
+| ![](./.img/categ.png)  | ![](./.img/project.png)| ![](./.img/status.png)  |
+
 
 ## Projetos
 
 Eu possuo um plano de estudos para cada [ano](https://github.com/mstuttgart/plano-de-estudos/projects) (começando por 2018). Todas as tarefas podem ser vistas [aqui](https://github.com/mstuttgart/plano-de-estudos/projects/1?fullscreen=true).
 
-![](./img/projetos.png)
+![](./.img/projetos.png)
 
 ## Créditos
 
