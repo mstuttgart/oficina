@@ -4,7 +4,7 @@ Este diretório contem projetos de estudo que fiz utilizando a linguagem Python.
 
 <p align="center">
   <a href="https://www.python.org/">
-    <img src=".img/python.png" alt="" width=256>
+    <img src=".img/python.png" alt="" width=200>
   </a>
 </p>
 
