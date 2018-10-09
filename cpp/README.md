@@ -1,8 +1,7 @@
 # C e C++
 
 <p align="center">
-<a name="top" href="http://www.cplusplus.com/doc/tutorial/">
-<img style="max-width:20%;" src=".img/cpp_logo.png"></a>
+<a name="top" href="http://www.cplusplus.com/doc/tutorial/"><img width=200 src=".img/cpp_logo.png"></a>
 </p>
 
 Lista de projetos desenvolvidos em C e C++.
