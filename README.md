@@ -26,16 +26,12 @@ Este repositório contem projetos de teste desenvolvidos durante meus estudos. E
 
 Alguns códigos foram feitos durante o começo da minha graduação. 
 
-| Title               | Description                                          |
-| :------------------ | :--------------------------------------------------- |
-| [Android](android/) | projetos usando Android SDK.                         |
-| [Cpp](cpp/)         | projetos desenvolvidos em C e C++.                   |
-| [Django](django/)   | projetos usando framework web Django.                |
-| [Elixir](elixir/)   | códigos desenvolvidos utilizando a linguagem Elixir. |
-| [Flask](flask/)     | projetos usando o framework web Flask.               |
-| [J2ME](j2me/)       | projetos usando J2ME.                                |
-| [Java](java/)       | projetos avulsos desenvolvidos em Java.              |
-| [PyGame](pygame/)   | amostras de código utilizando o PyGame.              |
+| Title             | Description                                           |
+| :---------------- | :---------------------------------------------------- |
+| [Cpp](cpp/)       | projetos desenvolvidos em C e C++.                    |
+| [Elixir](elixir/) | Projetos desenvolvidos utilizando a linguagem Elixir. |
+| [Python](python/) | Projetos desenvolvidos utilizando a linguagem Python. |
+| [Java](java/)     | projetos avulsos desenvolvidos em Java.               |
 
 ## Roadmap
 
@@ -45,9 +41,9 @@ Como guia de estudos, estou utilizando o excelente *roadmap* disponível [aqui](
 
 Este repositório tambem possui [issues](https://github.com/mstuttgart/plano-de-estudos/issues) relacionadas as tarefas do meu plano de estudos (cursos, livros, projetos "de estimação", blog e etc), para fins de organização. 
 
-| Categoria              | Projeto                |         Status          |
-| :---------------------:|:----------------------:|:-----------------------:|
-| ![](./.img/categ.png)  | ![](./.img/project.png)| ![](./.img/status.png)  |
+| Categoria             | Projeto                 | Status                 |
+| :-------------------: | :---------------------: | :--------------------: |
+| ![](./.img/categ.png) | ![](./.img/project.png) | ![](./.img/status.png) |
 
 
 ## Projetos
