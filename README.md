@@ -26,12 +26,12 @@ Este repositório contem projetos de teste desenvolvidos durante meus estudos. E
 
 Alguns códigos foram feitos durante o começo da minha graduação. 
 
-| Title             | Description                                           |
+| Diretório         | Descrição                                             |
 | :---------------- | :---------------------------------------------------- |
-| [Cpp](cpp/)       | projetos desenvolvidos em C e C++.                    |
-| [Elixir](elixir/) | Projetos desenvolvidos utilizando a linguagem Elixir. |
-| [Python](python/) | Projetos desenvolvidos utilizando a linguagem Python. |
-| [Java](java/)     | projetos avulsos desenvolvidos em Java.               |
+| [Cpp](cpp/)       | projetos desenvolvidos utilizando a linguagem C e C++ |
+| [Elixir](elixir/) | Projetos desenvolvidos utilizando a linguagem Elixir  |
+| [Python](python/) | Projetos desenvolvidos utilizando a linguagem Python  |
+| [Java](java/)     | projetos desenvolvidos utilizando a linguagem Java    |
 
 ## Roadmap
 
