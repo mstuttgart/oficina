@@ -3,8 +3,8 @@
 Este diretório contem projetos de estudo que fiz utilizando a linguagem Python. Cada um dos códigos estão separados de acordo com o framework utilizado.
 
 <p align="center">
-    <a href="https://www.python.org/">
-    <img src=".img/python.png" alt="" width=256 height=184>
+  <a href="https://www.python.org/">
+    <img src=".img/python.png" alt="" width=256>
   </a>
 </p>
 
