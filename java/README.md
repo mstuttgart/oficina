@@ -1,12 +1,10 @@
 # Java
 
-<p align="center">
-<a name="top" href="https://docs.oracle.com/javase/8/docs/technotes/guides/language/index.html">
-<img style="max-width:50%;" src=".img/Java-logo.jpg"></a>
-</p>
-
 Projetos utilizando a linguagem Java.
 
+<p align="center">
+<a href="https://docs.oracle.com/javase/8/docs/technotes/guides/language/index.html"><img width=300 src=".img/Java-logo.jpg"></a>
+</p>
 
 * [Android](android/): Projetos desenvolvidos em Android.
 * [J2ME](j2me/): Projetos desenvolvidos utilizando o antigo framework mobile J2ME.
