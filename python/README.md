@@ -3,7 +3,9 @@
 Este diretório contem projetos de estudo que fiz utilizando a linguagem Python. Cada um dos códigos estão separados de acordo com o framework utilizado.
 
 <p align="center">
-<a name="top" href="https://www.python.org/"><img width=150px src=".img/python.png"></a>
+    <a href="https://www.python.org/">
+    <img src=".img/python.png" alt="" width=256 height=184>
+  </a>
 </p>
 
 * [Django](django/): Projetos de teste utilizando o framework web Django.
