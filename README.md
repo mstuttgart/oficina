@@ -6,7 +6,7 @@ Plano de Estudos
 <br>
 </h1>
 
-<h4 align="center">Repositorios com materiais de estudo.</h4>
+<h4 align="center">Repositorios com materiais de estudo</h4>
 
 <p align="center">
 <b><a href="#introdução">Introdução</a></b>
