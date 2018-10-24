@@ -1,8 +1,12 @@
-# Meu Plano de Estudos
-
-<p align="center">
+<h1 align="center">
+<br>
 <a name="top" href="https://github.com/mstuttgart/plano-de-estudos"><img src="./.img/tux.png"></a>
-</p>
+<br>
+Plano de Estudos
+<br>
+</h1>
+
+<h4 align="center">Repositorios com materiais de estudo.</h4>
 
 <p align="center">
 <b><a href="#introdução">Introdução</a></b>
