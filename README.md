@@ -58,4 +58,4 @@ Eu possuo um plano de estudos para cada [ano](https://github.com/mstuttgart/plan
 
 ## Créditos
 
-Copyright (C) 2018 by Michell Stuttgart
+Copyright (C) 2018-2019 by Michell Stuttgart
