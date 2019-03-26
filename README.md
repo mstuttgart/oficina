@@ -30,12 +30,13 @@ Este repositório contem projetos de teste desenvolvidos durante meus estudos. E
 
 Alguns códigos foram feitos durante o começo da minha graduação. 
 
-| Diretório         | Descrição                                             |
-| :---------------- | :---------------------------------------------------- |
-| [Cpp](cpp/)       | projetos desenvolvidos utilizando a linguagem C e C++ |
-| [Elixir](elixir/) | Projetos desenvolvidos utilizando a linguagem Elixir  |
-| [Python](python/) | Projetos desenvolvidos utilizando a linguagem Python  |
-| [Java](java/)     | projetos desenvolvidos utilizando a linguagem Java    |
+| Diretório                  | Descrição                                                |
+| :------------------------- | :------------------------------------------------------- |
+| [Cpp](cpp/)                | projetos desenvolvidos utilizando a linguagem C e C++    |
+| [Elixir](elixir/)          | Projetos desenvolvidos utilizando a linguagem Elixir     |
+| [Python](python/)          | Projetos desenvolvidos utilizando a linguagem Python     |
+| [Java](java/)              | projetos desenvolvidos utilizando a linguagem Java       |
+| [Javascript](javasscript/) | projetos desenvolvidos utilizando a linguagem Javascript |
 
 ## Roadmap
 
@@ -45,7 +46,7 @@ Como guia de estudos, estou utilizando o excelente *roadmap* disponível [aqui](
 
 Este repositório tambem possui [issues](https://github.com/mstuttgart/plano-de-estudos/issues) relacionadas as tarefas do meu plano de estudos (cursos, livros, projetos "de estimação", blog e etc), para fins de organização. 
 
-| Categoria             | Projeto                 | Status                 |
+|       Categoria       |         Projeto         |         Status         |
 | :-------------------: | :---------------------: | :--------------------: |
 | ![](./.img/categ.png) | ![](./.img/project.png) | ![](./.img/status.png) |
 
