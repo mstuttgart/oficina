@@ -36,7 +36,7 @@ Alguns códigos foram feitos durante o começo da minha graduação.
 | [Elixir](elixir/)          | Projetos desenvolvidos utilizando a linguagem Elixir     |
 | [Python](python/)          | Projetos desenvolvidos utilizando a linguagem Python     |
 | [Java](java/)              | projetos desenvolvidos utilizando a linguagem Java       |
-| [Javascript](javasscript/) | projetos desenvolvidos utilizando a linguagem Javascript |
+| [Javascript](javascript/) | projetos desenvolvidos utilizando a linguagem Javascript |
 
 ## Roadmap
 
