@@ -98,3 +98,4 @@ target/
 
 .python-version
 .vscode/
+**/.env/
