@@ -16,8 +16,7 @@ class SpriteSheet:
         w = self.cell_width = self.rect.width / cols
         h = self.cell_height = self.rect.height / rows
 
-
-        self.cells = [(i % cols * w, i /cols * h, w, h) for i in range(self.total_cells)]
+        self.cells = [(i % cols * w, i // cols * h, w, h) for i in range(self.total_cells)]
 
     def draw(self, surface, cell_index, x, y):
         surface.blit(self.sheet, (x, y), self.cells[cell_index])
