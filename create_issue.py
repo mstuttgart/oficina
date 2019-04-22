@@ -5,12 +5,11 @@ USERNAME = 'mstuttgart'
 PASSWORD = ''
 REPO = 'mstuttgart/plano-de-estudos'
 
-MILESTONE_TITLE = 'Titulo milestone'
+MILESTONE_TITLE = 'Title'
 
-ISSUE_TITLE = 'Titulo - 0%d'
-ISSUE_QUANT = 1
-ISSUE_LABELS = ['Category: Books', 'Category: Idea']
-
+ISSUE_TITLE = 'Title - Cap. 0%d'
+ISSUE_QUANT = 2
+ISSUE_LABELS = ['Category: Courses', 'Category: Idea']
 
 # First create a Github instance:
 g = Github(USERNAME, PASSWORD)
@@ -24,8 +23,6 @@ labels = [repo.get_label(label) for label in ISSUE_LABELS]
 # Create a milestone
 milestone = repo.create_milestone(MILESTONE_TITLE)
 
-comment = ''
-
 # Create a issue set
 for i in range(ISSUE_QUANT):
     issue = repo.create_issue(
@@ -34,19 +31,3 @@ for i in range(ISSUE_QUANT):
         labels=labels,
         assignee=USERNAME,
     )
-    comment += '#' + issue.id + "\n"
-
-# Case estejamos criando issues para livros
-# Criamos uma issue adicional para anexar a
-# milestone de 12 livros em um ano
-if 'Category: Books' in labels:
-    # Create a milestone
-    milestone = repo.get_milestone(1)
-    repo.create_issue(
-        title=MILESTONE_TITLE,
-        body=comment,
-        milestone=milestone,
-        labels=labels,
-        assignee=USERNAME,
-    )
-
