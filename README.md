@@ -53,7 +53,7 @@ Este repositório tambem possui [issues](https://github.com/mstuttgart/plano-de-
 
 ## Projetos
 
-Eu possuo um plano de estudos para cada [ano](https://github.com/mstuttgart/plano-de-estudos/projects) (começando por 2018). Todas as tarefas podem ser vistas [aqui](https://github.com/mstuttgart/plano-de-estudos/projects/1?fullscreen=true).
+Eu possuo um plano de estudos para cada [ano](https://github.com/mstuttgart/plano-de-estudos/projects) (começando por 2018). Todas as tarefas podem ser vistas [aqui](https://github.com/mstuttgart/estudos/projects/2?fullscreen=true).
 
 ![](./.img/projetos.png)
 
