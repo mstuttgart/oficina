@@ -1,4 +1,8 @@
-function calcular() {
+function calcular(event) {
+
+  // Impede que a pagina recarregue
+  event.preventDefault();
+
   // Capturamos os valores a serem calculados
   var valor_a = document.getElementById("valor_a").value;
   var valor_b = document.getElementById("valor_b").value;
@@ -35,3 +39,5 @@ function calcular() {
   // de resultado
   document.getElementById("resultado").value = res;
 }
+
+document.querySelector('.form').addEventListener('submit', calcular);
