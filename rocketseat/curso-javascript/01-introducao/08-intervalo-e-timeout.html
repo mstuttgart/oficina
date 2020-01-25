@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Curso Javascript</title>
+</head>
+
+<body>
+    <script>
+        function exibeAlgo() {
+            console.log('Hello World!');
+        }
+
+        function exibeOutro(){
+            console.log('Hello World com atraso!');
+        }
+
+        // Executa a funcao 'exibeAlgo' (sem parenteses)
+        //  a cada 1000 segundos
+        setInterval(exibeAlgo, 1000);
+
+        // Executa um delay de 5000 seg. antes
+        // antes de chamar a funcao 'exibeOutro'
+        setTimeout(exibeOutro, 5000);
+
+    </script>
+</body>
+
+</html>
