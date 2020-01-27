@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://digaoi.gd" type="Script" id=1]
+
+[node name="Panel" type="Panel"]
+margin_right = 155.0
+margin_bottom = 112.0
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 29.7482
+margin_top = 27.7975
+margin_right = 116.748
+margin_bottom = 41.7975
+text = "This is a label"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 38.5263
+margin_top = 59.4964
+margin_right = 50.5263
+margin_bottom = 79.4964
+text = "Press Me"
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
