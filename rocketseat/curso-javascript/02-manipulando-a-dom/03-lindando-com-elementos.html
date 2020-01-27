@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Javascript</title>
+</head>
+
+<body>
+    <div id="app">
+    </div>
+    <script>
+        // Cria elemento link
+        var linkElement = document.createElement('a');
+
+        linkElement.setAttribute('href', 'http://google.com');
+
+        var textElement = document.createTextNode('Acessar url');
+        linkElement.appendChild(textElement);
+
+        // Pega a div direto
+        // Com ID utilizamos #id e com class utilizamos .class
+        var containerElement = document.querySelector('#app');
+        containerElement.appendChild(linkElement);
+    </script>
+</body>
+
+</html>

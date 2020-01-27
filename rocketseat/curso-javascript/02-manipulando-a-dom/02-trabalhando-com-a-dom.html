@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Javascript</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" id="nome" name="nome" />
+        <button class="botao">Adicionar</button>
+    </div>
+    <script>
+        // Pega ID. ID sempre e unico dentro do HTML
+        // var inputElement = document.getElementById('nome');
+
+        // Pega elemento por tag. Sempre retornar um vetor
+        // var inputElement = document.getElementByTag('input');
+
+        // A 'querySelector' nos permite andar pelo HTML
+        // semelhante ao xpath
+        // Sempre retorna um unico elemento, se houver mais de 
+        // um elemento ele retornar o primeiro que encontrar
+        // Para retornar todos utilizar o 'querySelectorAll'
+        var inputElement = document.querySelector('body div#app input[name=nome]');
+
+        var btnElement = document.querySelector('body div#app button.botao');
+        btnElement.onclick = function () {
+            var text = inputElement.value;
+            alert(text)
+        }
+    </script>
+</body>
+
+</html>
