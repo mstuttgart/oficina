@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio Javascript 01</title>
+</head>
+
+<body>
+
+    <script>
+
+        function montaEndereco(endereco) {
+            return `O usuário mora em ${endereco.cidade} / ${endereco.uf}, no bairro ${endereco.bairro}, na rua "${endereco.rua}" com nº ${endereco.numero}.`;
+        }
+
+        var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+        };
+
+        console.log(montaEndereco(endereco))
+
+    </script>
+</body>
+
+</html>

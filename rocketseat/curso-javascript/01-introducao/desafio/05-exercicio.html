@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 05 - Curso Javascript</title>
+</head>
+
+<body>
+
+    <script>
+        function imprimeHabilidade(usuarios) {
+
+            for (var usr of usuarios) {
+                var strHabilidades = usr.habilidades.join(', ');
+                console.log(`O ${usr.nome} possui as habilidades: ${strHabilidades}`);
+            }
+        }
+
+        var usuarios = [
+            {
+                nome: 'Diego',
+                habilidades: ['Javascript', 'React', 'Redux']
+            },
+            {
+                nome: 'Gabriel',
+                habilidades: ['VueJS', 'Ruby on Rails', 'Elixir']
+            }
+        ];
+
+        imprimeHabilidade(usuarios);
+
+    </script>
+</body>
+
+</html>
