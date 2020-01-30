@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 03 - Curso Javascript</title>
+</head>
+
+<body>
+    <div id="app">
+        <ul id="lista"> </ul>
+    </div>
+
+    <script>
+        var nomes = ['Diego', 'Gabriel', 'Lucas'];
+
+        ulElement = document.getElementById('lista');
+
+        for (var nome of nomes) {
+            liElement = document.createElement('li');
+
+            liText = document.createTextNode(nome);
+            liElement.appendChild(liText);
+
+            ulElement.appendChild(liElement);
+        }
+    </script>
+</body>
+
+</html>

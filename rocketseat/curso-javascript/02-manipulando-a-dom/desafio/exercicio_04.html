@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 04 - Curso de Javascript</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <input type="text" name="nome">
+
+        <button onclick="adicionar()">Adicionar</button>
+        <ul id="lista">
+        </ul>
+    </div>
+
+    <script>
+
+        function insereNome(nome) {
+            var lista = document.getElementById('lista');
+
+            li = document.createElement('li');
+            liText = document.createTextNode(nome);
+
+            li.appendChild(liText);
+
+            lista.appendChild(li);
+        }
+
+        var btn = document.getElementById('botao');
+        var nomes = ['Diego', 'Gabriel', 'Lucas'];
+
+        for (var nome of nomes) {
+            insereNome(nome);
+        }
+
+        function adicionar() {
+            var inputElement = document.querySelector('input[name=nome]');
+
+            console.log(inputElement);
+            insereNome(inputElement.value);
+
+            // Apaga o nome digitado
+            inputElement.value = '';
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 02 - Curso de Javascript</title>
+</head>
+
+<body>
+    <div id="app">
+        <button class="botao">Criar Quadrado</button class="botao">
+    </div>
+
+    <script>
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        var btn = document.querySelector('.botao');
+
+        btn.onclick = function () {
+            var box = document.createElement('div');
+
+            box.style.width = 100;
+            box.style.height = 100;
+            box.style.backgroundColor = '#F00';
+
+            box.onmouseover = function () {
+                box.style.backgroundColor = getRandomColor();
+            };
+
+            var app = document.getElementById('app');
+            app.appendChild(box);
+        }
+    </script>
+</body>
+
+</html>

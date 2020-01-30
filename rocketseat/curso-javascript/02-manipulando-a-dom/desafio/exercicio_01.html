@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 01 - Curso Javascript</title>
+</head>
+
+<body>
+    <div id="app">
+        <button class="botao">Criar Quandrado</button>
+        <div id="quadrado"> </div>
+    </div>
+    <script>
+
+        var botao = document.querySelector('.botao');
+
+        botao.onclick = function () {
+            // Criamos o elemento div
+            var box = document.createElement('div');
+
+            box.style.width = 100;
+            box.style.height = 100;
+            box.style.backgroundColor = '#F00';
+
+            var divApp = document.querySelector('#app');
+
+            // Adicionamos dento da div principal
+            divApp.appendChild(box);
+        }
+
+    </script>
+</body>
+
+</html>
