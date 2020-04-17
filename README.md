@@ -40,7 +40,7 @@ Alguns códigos foram feitos durante o começo da minha graduação.
 
 ## Roadmap
 
-Como guia de estudos, estou utilizando o excelente *roadmap* disponível [aqui](https://github.com/kamranahmedse/developer-roadmap). Eu também adicionei em meus estudos livros sobre desenvolvimento pessoal (principalmente aqueles focados em desenvolvimento de software) e livros de literaruta comuns (afinal, ninguém é de ferro :smile:). O outros assuntos mais específicos como emulação, compactação, compiladores e linguagens de programação, também estão em meu *roadmap*.
+Como guia de estudos, estou utilizando o excelente *roadmap* disponível [aqui](https://github.com/kamranahmedse/developer-roadmap). Eu também adicionei em meus estudos livros sobre desenvolvimento pessoal e livros de literaruta comuns (afinal, ninguém é de ferro :smile:). O outros assuntos mais específicos como emulação, compactação, compiladores e linguagens de programação, também estão em meu *roadmap*.
 
 ## Tarefas
 
