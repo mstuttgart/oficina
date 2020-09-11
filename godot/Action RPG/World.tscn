@@ -1,21 +1,61 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/GrassBackground.png" type="Texture" id=3]
+[ext_resource path="res://World/DirtTileset.png" type="Texture" id=4]
 
-[node name="World" type="YSort"]
+[sub_resource type="TileSet" id=1]
+0/name = "DirtTileset.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 176, 80 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 1
+0/autotile/bitmask_flags = [ Vector2( 0, 0 ), 432, Vector2( 0, 1 ), 438, Vector2( 0, 2 ), 54, Vector2( 0, 3 ), 48, Vector2( 1, 0 ), 504, Vector2( 1, 1 ), 511, Vector2( 1, 2 ), 63, Vector2( 1, 3 ), 56, Vector2( 2, 0 ), 216, Vector2( 2, 1 ), 219, Vector2( 2, 2 ), 27, Vector2( 2, 3 ), 24, Vector2( 3, 0 ), 144, Vector2( 3, 1 ), 146, Vector2( 3, 2 ), 18, Vector2( 3, 3 ), 16, Vector2( 4, 0 ), 176, Vector2( 4, 1 ), 182, Vector2( 4, 2 ), 434, Vector2( 4, 3 ), 50, Vector2( 4, 4 ), 178, Vector2( 5, 0 ), 248, Vector2( 5, 1 ), 255, Vector2( 5, 2 ), 507, Vector2( 5, 3 ), 59, Vector2( 5, 4 ), 251, Vector2( 6, 0 ), 440, Vector2( 6, 1 ), 447, Vector2( 6, 2 ), 510, Vector2( 6, 3 ), 62, Vector2( 6, 4 ), 446, Vector2( 7, 0 ), 152, Vector2( 7, 1 ), 155, Vector2( 7, 2 ), 218, Vector2( 7, 3 ), 26, Vector2( 7, 4 ), 154, Vector2( 8, 0 ), 184, Vector2( 8, 1 ), 191, Vector2( 8, 2 ), 506, Vector2( 8, 3 ), 58, Vector2( 8, 4 ), 186, Vector2( 9, 0 ), 443, Vector2( 9, 1 ), 254, Vector2( 9, 2 ), 442, Vector2( 9, 3 ), 190, Vector2( 10, 2 ), 250, Vector2( 10, 3 ), 187 ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 16, 16 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
+[node name="World" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 160, 90 )
+scale = Vector2( 5, 2.875 )
+texture = ExtResource( 3 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 3, 0, 0, 4, 0, 2, 65539, 0, 65536, 65540, 0, 65538, 131075, 0, 65536, 131076, 0, 65538, 196611, 0, 65540, 196612, 0, 196613, 196613, 0, 196609, 196614, 0, 196609, 196615, 0, 196609, 196616, 0, 6, 196617, 0, 2, 262147, 0, 65539, 262152, 0, 131072, 262153, 0, 9, 262154, 0, 1, 262155, 0, 1, 262156, 0, 2, 327681, 0, 4, 327682, 0, 196609, 327683, 0, 196615, 327689, 0, 131072, 327690, 0, 131073, 327691, 0, 131073, 327692, 0, 196613, 327693, 0, 6, 327694, 0, 2, 393217, 0, 65539, 393229, 0, 65536, 393230, 0, 65538, 458753, 0, 65539, 458765, 0, 131072, 458766, 0, 65543, 524288, 0, 196608, 524289, 0, 196615, 524302, 0, 131076, 524303, 0, 2, 589838, 0, 131072, 589839, 0, 9, 589840, 0, 2, 655375, 0, 65536, 655376, 0, 65538, 720911, 0, 131072, 720912, 0, 196613, 720913, 0, 196609, 720914, 0, 196610 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 96, 64 )
 
-[node name="Bush" parent="." instance=ExtResource( 1 )]
+[node name="Bush" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 32, 32 )
 
-[node name="Bush2" parent="." instance=ExtResource( 1 )]
+[node name="Bush2" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 56, 120 )
 
-[node name="Bush3" parent="." instance=ExtResource( 1 )]
+[node name="Bush3" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 192, 32 )
 
-[node name="Bush4" parent="." instance=ExtResource( 1 )]
+[node name="Bush4" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 200, 112 )
