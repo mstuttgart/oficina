@@ -7,16 +7,26 @@ var score
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
-	new_game()
 
 func game_over():
 	$ScoreTimer.stop()
 	$MobTimer.stop()
+	$Hud.show_game_over()
+	
+	# Deleta todos os mobs do grupo, de modo
+	# a limpar a tela
+	get_tree().call_group("MobGroup", "queue_free")
+	
+	$Music.stop()
+	$DeathSound.play()
 	
 func new_game():
 	score = 0
+	$Music.play()
 	$Player.start($StartPosition.position)
 	$StartTimer.start()
+	$Hud.update_score(score)
+	$Hud.show_message("Get Ready")
 
 
 func _on_MobTimer_timeout():
@@ -44,6 +54,7 @@ func _on_MobTimer_timeout():
 
 func _on_ScoreTimer_timeout():
 	score += 1
+	$Hud.update_score(score)
 
 
 func _on_StartTimer_timeout():
