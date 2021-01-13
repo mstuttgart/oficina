@@ -1,0 +1,232 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 32, 32 )
+
+[node name="World" type="Node"]
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 512, 256 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Player"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource( 1 )
+
+[node name="Walls" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="Wall" type="StaticBody2D" parent="Walls"]
+editor/display_folded = true
+modulate = Color( 0.2, 0.0823529, 0.0823529, 1 )
+position = Vector2( 512, 544 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Walls/Wall"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall"]
+shape = SubResource( 2 )
+
+[node name="Wall2" type="StaticBody2D" parent="Walls"]
+editor/display_folded = true
+modulate = Color( 0.2, 0.0823529, 0.0823529, 1 )
+position = Vector2( 448, 544 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Walls/Wall2"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall2"]
+shape = SubResource( 2 )
+
+[node name="Wall3" type="StaticBody2D" parent="Walls"]
+editor/display_folded = true
+modulate = Color( 0.2, 0.0823529, 0.0823529, 1 )
+position = Vector2( 384, 544 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Walls/Wall3"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall3"]
+shape = SubResource( 2 )
+
+[node name="Wall4" type="StaticBody2D" parent="Walls"]
+editor/display_folded = true
+modulate = Color( 0.2, 0.0823529, 0.0823529, 1 )
+position = Vector2( 320, 544 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Walls/Wall4"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall4"]
+shape = SubResource( 2 )
+
+[node name="Wall5" type="StaticBody2D" parent="Walls"]
+editor/display_folded = true
+modulate = Color( 0.2, 0.0823529, 0.0823529, 1 )
+position = Vector2( 576, 544 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Walls/Wall5"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall5"]
+shape = SubResource( 2 )
+
+[node name="Wall6" type="StaticBody2D" parent="Walls"]
+editor/display_folded = true
+modulate = Color( 0.2, 0.0823529, 0.0823529, 1 )
+position = Vector2( 640, 544 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Walls/Wall6"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall6"]
+shape = SubResource( 2 )
+
+[node name="Wall7" type="StaticBody2D" parent="Walls"]
+editor/display_folded = true
+modulate = Color( 0.2, 0.0823529, 0.0823529, 1 )
+position = Vector2( 704, 544 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Walls/Wall7"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall7"]
+shape = SubResource( 2 )
+
+[node name="Wall8" type="StaticBody2D" parent="Walls"]
+editor/display_folded = true
+modulate = Color( 0.2, 0.0823529, 0.0823529, 1 )
+position = Vector2( 768, 544 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Walls/Wall8"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall8"]
+shape = SubResource( 2 )
+
+[node name="Wall9" type="StaticBody2D" parent="Walls"]
+modulate = Color( 0.2, 0.0823529, 0.0823529, 1 )
+position = Vector2( 256, 544 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Walls/Wall9"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall9"]
+shape = SubResource( 2 )
+
+[node name="Wall10" type="StaticBody2D" parent="Walls"]
+modulate = Color( 0.2, 0.0823529, 0.0823529, 1 )
+position = Vector2( 768, 480 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Walls/Wall10"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall10"]
+shape = SubResource( 2 )
+
+[node name="Wall11" type="StaticBody2D" parent="Walls"]
+modulate = Color( 0.2, 0.0823529, 0.0823529, 1 )
+position = Vector2( 768, 416 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Walls/Wall11"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall11"]
+shape = SubResource( 2 )
+
+[node name="Wall12" type="StaticBody2D" parent="Walls"]
+modulate = Color( 0.2, 0.0823529, 0.0823529, 1 )
+position = Vector2( 832, 416 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Walls/Wall12"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall12"]
+shape = SubResource( 2 )
+
+[node name="Wall13" type="StaticBody2D" parent="Walls"]
+modulate = Color( 0.2, 0.0823529, 0.0823529, 1 )
+position = Vector2( 256, 480 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Walls/Wall13"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall13"]
+shape = SubResource( 2 )
+
+[node name="Wall14" type="StaticBody2D" parent="Walls"]
+modulate = Color( 0.2, 0.0823529, 0.0823529, 1 )
+position = Vector2( 192, 480 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Walls/Wall14"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall14"]
+shape = SubResource( 2 )
+
+[node name="Wall15" type="StaticBody2D" parent="Walls"]
+modulate = Color( 0.2, 0.0823529, 0.0823529, 1 )
+position = Vector2( 128, 480 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Walls/Wall15"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall15"]
+shape = SubResource( 2 )
+
