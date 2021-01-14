@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Player/Idle0.png" type="Texture" id=2]
@@ -9,9 +9,10 @@
 [ext_resource path="res://Sprites/Player/Run4.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/Player/Run7.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Player/Jump1.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Tiles/JungleDirtTileSet.tres" type="TileSet" id=10]
+[ext_resource path="res://Sprites/Player/Jump3.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Tiles/JungleDirtTileSet.tres" type="TileSet" id=11]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
@@ -27,34 +28,40 @@ animations = [ {
 "loop": true,
 "name": "Jump",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "Fall",
+"speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 14, 28 )
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 14.0
+height = 28.0
 
 [node name="World" type="Node"]
 
 [node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 256, 128 )
+position = Vector2( 288, 112.563 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="AnimatedSprite" parent="Player"]
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "Idle"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2( 0, 4 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = ExtResource( 10 )
+tile_set = ExtResource( 11 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 524289, 0, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 1, 0, 524300, 1, 0, 524301, 1, 0, 524302, 1, 0, 524303, 1, 0, 524304, 2, 0, 589825, 3, 0, 589826, 4, 0, 589827, 4, 0, 589828, 4, 0, 589829, 4, 0, 589830, 4, 0, 589831, 4, 0, 589832, 4, 0, 589833, 4, 0, 589834, 4, 0, 589835, 4, 0, 589836, 4, 0, 589837, 4, 0, 589838, 4, 0, 589839, 4, 0, 589840, 5, 0, 655361, 6, 0, 655362, 7, 0, 655363, 7, 0, 655364, 7, 0, 655365, 7, 0, 655366, 7, 0, 655367, 7, 0, 655368, 7, 0, 655369, 7, 0, 655370, 7, 0, 655371, 7, 0, 655372, 7, 0, 655373, 7, 0, 655374, 7, 0, 655375, 7, 0, 655376, 8, 0 )
+tile_data = PoolIntArray( 196612, 0, 0, 196613, 1, 0, 196614, 1, 0, 196615, 2, 0, 262148, 6, 0, 262149, 7, 0, 262150, 7, 0, 262151, 8, 0, 327692, 0, 0, 327693, 1, 0, 327694, 1, 0, 327695, 2, 0, 393228, 3, 0, 393229, 4, 0, 393230, 4, 0, 393231, 5, 0, 458764, 3, 0, 458765, 4, 0, 458766, 4, 0, 458767, 5, 0, 524289, 0, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 1, 0, 524300, 1, 0, 524301, 1, 0, 524302, 1, 0, 524303, 1, 0, 524304, 2, 0, 589825, 3, 0, 589826, 4, 0, 589827, 4, 0, 589828, 4, 0, 589829, 4, 0, 589830, 4, 0, 589831, 4, 0, 589832, 4, 0, 589833, 4, 0, 589834, 4, 0, 589835, 4, 0, 589836, 4, 0, 589837, 4, 0, 589838, 4, 0, 589839, 4, 0, 589840, 5, 0, 655361, 6, 0, 655362, 7, 0, 655363, 7, 0, 655364, 7, 0, 655365, 7, 0, 655366, 7, 0, 655367, 7, 0, 655368, 7, 0, 655369, 7, 0, 655370, 7, 0, 655371, 7, 0, 655372, 7, 0, 655373, 7, 0, 655374, 7, 0, 655375, 7, 0, 655376, 8, 0 )
 __meta__ = {
 "_edit_lock_": true
 }

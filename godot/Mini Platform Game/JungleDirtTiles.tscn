@@ -8,7 +8,6 @@ extents = Vector2( 16, 16 )
 [node name="JungleDirtTiles" type="Node"]
 
 [node name="0" type="Sprite" parent="."]
-editor/display_folded = true
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
