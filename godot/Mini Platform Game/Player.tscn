@@ -31,12 +31,12 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 11 ) ],
-"loop": true,
+"loop": false,
 "name": "Rise",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 12 ) ],
-"loop": true,
+"loop": false,
 "name": "Jump",
 "speed": 5.0
 } ]

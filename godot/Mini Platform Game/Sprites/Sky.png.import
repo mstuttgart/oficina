@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Jump0.png-34054d7e9518e3e1f6bdccfdd225fd84.stex"
+path="res://.import/Sky.png-14b1388b41baefd575e2908a4f206ee9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/Jump0.png"
-dest_files=[ "res://.import/Jump0.png-34054d7e9518e3e1f6bdccfdd225fd84.stex" ]
+source_file="res://Sprites/Sky.png"
+dest_files=[ "res://.import/Sky.png-14b1388b41baefd575e2908a4f206ee9.stex" ]
 
 [params]
 

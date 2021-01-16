@@ -7,7 +7,7 @@ const MAX_SPEED = 200
 const JUMP_HEIGHT = -500
 
 var motion = Vector2()
- 
+
 func _physics_process(delta): 
 	
 	motion.y += GRAVITY

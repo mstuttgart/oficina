@@ -8,6 +8,7 @@ extents = Vector2( 16, 16 )
 [node name="JungleDirtTiles" type="Node"]
 
 [node name="0" type="Sprite" parent="."]
+editor/display_folded = true
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -25,7 +26,7 @@ shape = SubResource( 1 )
 
 [node name="1" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 64, 0 )
+position = Vector2( 32, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -43,7 +44,7 @@ shape = SubResource( 1 )
 
 [node name="2" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 128, 0 )
+position = Vector2( 64, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -61,7 +62,7 @@ shape = SubResource( 1 )
 
 [node name="3" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 0, 64 )
+position = Vector2( 0, 32 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -79,11 +80,11 @@ shape = SubResource( 1 )
 
 [node name="4" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 64, 64 )
+position = Vector2( 64, 32 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 160, 160, 32, 32 )
+region_rect = Rect2( 96, 160, 32, 32 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -97,11 +98,11 @@ shape = SubResource( 1 )
 
 [node name="5" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 128, 64 )
+position = Vector2( 32, 32 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 96, 160, 32, 32 )
+region_rect = Rect2( 160, 160, 32, 32 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -115,7 +116,7 @@ shape = SubResource( 1 )
 
 [node name="6" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 0, 128 )
+position = Vector2( 0, 64 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -133,7 +134,7 @@ shape = SubResource( 1 )
 
 [node name="7" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 64, 128 )
+position = Vector2( 32, 64 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -151,7 +152,7 @@ shape = SubResource( 1 )
 
 [node name="8" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 128, 128 )
+position = Vector2( 64, 64 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -166,4 +167,87 @@ __meta__ = {
 visible = false
 position = Vector2( 16, 16 )
 shape = SubResource( 1 )
+
+[node name="9" type="Sprite" parent="."]
+position = Vector2( 0, 160 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 32, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="9/StaticBody2D"]
+visible = false
+position = Vector2( 16, 16 )
+shape = SubResource( 1 )
+
+[node name="10" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 32, 160 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 32, 32, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="10"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="10/StaticBody2D"]
+visible = false
+position = Vector2( 16, 16 )
+shape = SubResource( 1 )
+
+[node name="11" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 64, 160 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 64, 32, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="11"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="11/StaticBody2D"]
+visible = false
+position = Vector2( 16, 16 )
+shape = SubResource( 1 )
+
+[node name="12" type="Sprite" parent="."]
+position = Vector2( 128, 96 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="13" type="Sprite" parent="."]
+position = Vector2( 160, 96 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 32, 0, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="14" type="Sprite" parent="."]
+position = Vector2( 192, 96 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 64, 0, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
 
