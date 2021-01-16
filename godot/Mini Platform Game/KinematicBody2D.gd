@@ -44,6 +44,8 @@ func _physics_process(delta):
 
 	else:
 		if motion.y < 0:
+			$Sprite.play("Rise")
+		elif motion.y == 0:
 			$Sprite.play("Jump")
 		else:
 			$Sprite.play("Fall")
