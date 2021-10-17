@@ -1,62 +1,24 @@
-<h1 align="center">
-<br>
-<a name="top" href="https://github.com/mstuttgart/plano-de-estudos"><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/emojione/178/seedling_1f331.png"></a>
-<br>
-Notas de Estudos
-<br>
-</h1>
+![hardest-programming-language](https://user-images.githubusercontent.com/8174740/137630704-373b6033-6420-4286-901c-830090732b0b.png)
 
-<h4 align="center">Repositorios com materiais de estudo</h4>
 
 <p align="center">
 <b><a href="#introdução">Introdução</a></b>
 |
-<b><a href="#conteúdo">Conteúdo</a></b>
-|
 <b><a href="#roadmap">Roadmap</a></b>
-|
-<b><a href="#tarefas">Tarefas</a></b>
-|
-<b><a href="#projetos">Projetos</a></b>
 |
 <b><a href="#créditos">Créditos</a></b>
 </p>
 
 ## Introdução
 
+Bem vindo a minha oficina. É aqui onde faço testes e estudos com linguagens, frameworks e ferramentas
+
 Este repositório contem projetos de teste desenvolvidos durante meus estudos. Estes projetos podem ser utilizados livremente, contudo nenhum deles está em um nível apropriado para ser utilizado em ambiente de produção.
-
-## Conteúdo
-
-Alguns códigos foram feitos durante o começo da minha graduação. 
-
-| Diretório                  | Descrição                                                |
-| :------------------------- | :------------------------------------------------------- |
-| [Cpp](cpp/)                | projetos desenvolvidos utilizando a linguagem C e C++    |
-| [Elixir](elixir/)          | Projetos desenvolvidos utilizando a linguagem Elixir     |
-| [Python](python/)          | Projetos desenvolvidos utilizando a linguagem Python     |
-| [Java](java/)              | projetos desenvolvidos utilizando a linguagem Java       |
-| [Javascript](javascript/) | projetos desenvolvidos utilizando a linguagem Javascript |
 
 ## Roadmap
 
 Como guia de estudos, estou utilizando o excelente *roadmap* disponível [aqui](https://github.com/kamranahmedse/developer-roadmap). Eu também adicionei em meus estudos livros sobre desenvolvimento pessoal e livros de literaruta comuns (afinal, ninguém é de ferro :smile:). O outros assuntos mais específicos como emulação, compactação, compiladores e linguagens de programação, também estão em meu *roadmap*.
 
-## Tarefas
-
-Este repositório tambem possui [issues](https://github.com/mstuttgart/plano-de-estudos/issues) relacionadas as tarefas do meu plano de estudos (cursos, livros, projetos "de estimação", blog e etc), para fins de organização. 
-
-|       Categoria       |         Projeto         |         Status         |
-| :-------------------: | :---------------------: | :--------------------: |
-| ![](./.img/categ.png) | ![](./.img/project.png) | ![](./.img/status.png) |
-
-
-## Projetos
-
-Eu possuo um plano de estudos para cada [ano](https://github.com/mstuttgart/plano-de-estudos/projects) (começando por 2018). Todas as tarefas podem ser vistas [aqui](https://github.com/mstuttgart/estudos/projects/2?fullscreen=true).
-
-![](./.img/projetos.png)
-
 ## Créditos
 
-Copyright (C) 2018-2019 by Michell Stuttgart
+Copyright (C) 2018-2021 by Michell Stuttgart
