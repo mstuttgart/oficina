@@ -11,13 +11,13 @@
 
 ## Introdução
 
-Bem vindo a minha oficina. É aqui onde faço testes e estudos com linguagens, frameworks e ferramentas
+Seja bem-vindo à minha oficina. É aqui onde faço testes e estudos com linguagens, frameworks e ferramentas de programação e crio protótipos para testar a viabilidade de alguma idea que tive.
 
-Este repositório contem projetos de teste desenvolvidos durante meus estudos. Estes projetos podem ser utilizados livremente, contudo nenhum deles está em um nível apropriado para ser utilizado em ambiente de produção.
+Este repositório contem projetos e códigos de teste desenvolvidos durante meus estudos. Estes projetos podem ser utilizados livremente, contudo nenhum deles está em um nível apropriado para ser utilizado em ambiente de produção ou em um projeto sério.
 
 ## Roadmap
 
-Como guia de estudos, estou utilizando o excelente *roadmap* disponível [aqui](https://github.com/kamranahmedse/developer-roadmap). Eu também adicionei em meus estudos livros sobre desenvolvimento pessoal e livros de literaruta comuns (afinal, ninguém é de ferro :smile:). O outros assuntos mais específicos como emulação, compactação, compiladores e linguagens de programação, também estão em meu *roadmap*.
+Como guia de estudos, estou utilizando o excelente *roadmap* disponível [aqui](https://github.com/kamranahmedse/developer-roadmap). O outros assuntos mais específicos como emulação, compactação, compiladores e linguagens de programação, também estão em meu *roadmap*.
 
 ## Créditos
 
