@@ -99,3 +99,7 @@ target/
 .python-version
 .vscode/
 **/.env/
+
+node_modules
+yarn-error.log
+
