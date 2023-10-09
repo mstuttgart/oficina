@@ -1,0 +1,30 @@
+{
+  "authors": [
+    "Smarticles101"
+  ],
+  "contributors": [
+    "alirezaghey",
+    "bkhl",
+    "budmc29",
+    "glennj",
+    "guygastineau",
+    "IsaacG",
+    "kotp",
+    "kytrinyx",
+    "sjwarner-bp",
+    "ZapAnton"
+  ],
+  "files": {
+    "solution": [
+      "two_fer.sh"
+    ],
+    "test": [
+      "two_fer.bats"
+    ],
+    "example": [
+      ".meta/example.sh"
+    ]
+  },
+  "blurb": "Create a sentence of the form \"One for X, one for me.\".",
+  "source_url": "https://github.com/exercism/problem-specifications/issues/757"
+}
