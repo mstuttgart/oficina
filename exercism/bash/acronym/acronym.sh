@@ -8,10 +8,6 @@ main() {
     # save the parameter string
     TEXT="$1"
 
-    # delete '*' from string
-    TEXT=$(echo $TEXT | tr -d '*')
-
-
     # convert all string to uppercase
     TEXT=$(echo $TEXT | tr [:lower:] [:upper:])
 
