@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Odin Project: Landing Page</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div class="panel-header">
+
+    <div class="header">
+      <h1 class="logo-text">Header Logo</h1>
+      <ul>
+        <li><a href="#">header link one</a></li>
+        <li><a href="#">header link tow</a></li>
+        <li><a href="#">header link three</a></li>
+      </ul>
+    </div>
+
+    <div class="hero">
+      <div class="content">
+        <h1 class="hero-main">This website is awesome</h1>
+        <p class="hero-secundary">
+          This website has some subtext that goes here under the main title.
+          It's a smaller font and color is lower contrast.
+        </p>
+        <button class="btn">Sign Up</button>
+      </div>
+
+      <div class="hero-image">
+        <img src="./img/mel-panel.jpg" alt="Image" />
+      </div>
+    </div>
+
+  </div>
+
+  <div class="info-panel">
+    <span>Some random information</span>
+    <div class="items">
+      <div class="item">
+        <img src="./img/mel.png" alt="Mel" />
+        <p>this is some subtex under an illustration or image</p>
+      </div>
+      <div class="item">
+        <img src="./img/mel.png" alt="Mel" />
+        <p>this is some subtex under an illustration or image</p>
+      </div>
+      <div class="item">
+        <img src="./img/mel.png" alt="Mel" />
+        <p>this is some subtex under an illustration or image</p>
+      </div>
+      <div class="item">
+        <img src="./img/mel.png" alt="Mel" />
+        <p>this is some subtex under an illustration or image</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="quote-panel">
+    <p class="quote">
+      This is inspiring quote, or a testimonial from a customer. Maybe it's
+      juts fillig up space, or maybe people will actually read it. Who knows?
+      All I know is that it looks nice.
+    </p>
+    <span>-Thor, God of Thunder</span>
+  </div>
+
+  <div class="signup-panel">
+    <div class="panel">
+      <span class="title">Call to action! Its time!</span>
+      <span class="text">Sign up for out product by clicking that button right over
+        there!</span>
+    </div>
+    <div class="btn signup">Sign Up</div>
+  </div>
+
+  <div class="footer">
+    <span>Copyright &copy; The Odin Project 2023 </span>
+  </div>
+</body>
+
+</html>
