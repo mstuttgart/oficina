@@ -1,0 +1,28 @@
+
+body {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  width: 320px;
+  height: 320px;
+  /* border: solid 1px gray; */
+  border: none;
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-flow: row wrap;
+}
+
+.grid {
+  width: 14px;
+  height: 14px;
+  border: solid 1px gray;
+}
+
+.line-break {
+  width: 100%;
+  border: 0;
+  padding: 0;
+}
