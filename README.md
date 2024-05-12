@@ -1,24 +1,18 @@
-![hardest-programming-language](https://user-images.githubusercontent.com/8174740/137630704-373b6033-6420-4286-901c-830090732b0b.png)
+<!-- ![hardest-programming-language](https://user-images.githubusercontent.com/8174740/137630704-373b6033-6420-4286-901c-830090732b0b.png) -->
 
+<h1 align="center">
+<a href="[https://github.com/mstuttgart/oficina/assets/8174740/a1aa268a-4fe7-424b-8257-3e00acf66db7](https://github.com/mstuttgart/oficina)">
+  <img src="https://github.com/mstuttgart/oficina/assets/8174740/a1aa268a-4fe7-424b-8257-3e00acf66db7"/>
+</a>
+  
+  <br>
+</h1>
 
-<p align="center">
-<b><a href="#introdução">Introdução</a></b>
-|
-<b><a href="#roadmap">Roadmap</a></b>
-|
-<b><a href="#créditos">Créditos</a></b>
-</p>
+## About
 
-## Introdução
+Welcome to my workshop! This is where I test and study languages, frameworks and programming tools and create prototypes to test the viability of an idea I had.
 
-Seja bem-vindo à minha oficina. É aqui onde faço testes e estudos com linguagens, frameworks e ferramentas de programação e crio protótipos para testar a viabilidade de alguma idea que tive.
+> [!IMPORTANT]
+> This repository contains projects and test codes developed during my studies. These projects can be used freely, however none of them are at an appropriate level to be used in a production environment or in a serious project.
 
-Este repositório contem projetos e códigos de teste desenvolvidos durante meus estudos. Estes projetos podem ser utilizados livremente, contudo nenhum deles está em um nível apropriado para ser utilizado em ambiente de produção ou em um projeto sério.
-
-## Roadmap
-
-Como guia de estudos, estou utilizando o excelente *roadmap* disponível [aqui](https://github.com/kamranahmedse/developer-roadmap). O outros assuntos mais específicos como emulação, compactação, compiladores e linguagens de programação, também estão em meu *roadmap*.
-
-## Créditos
-
-Copyright (C) 2018-2021 by Michell Stuttgart
+[![My Skills](https://skillicons.dev/icons?i=python,c,cpp,java,bash,elixir,js,html,css,ansible,godot)](https://skillicons.dev)
