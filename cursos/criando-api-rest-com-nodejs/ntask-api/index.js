@@ -4,7 +4,9 @@ const consign = require("consign");
 const app = express();
 
 consign()
-  .include("models")
+  .include("db.js")
+  .then("models")
+  .then("associations.js")
   .then("middlewares.js")
   .then("routes")
   .then("boot.js")
