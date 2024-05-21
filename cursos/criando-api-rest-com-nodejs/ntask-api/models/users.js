@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt");
-const { DataTypes, STRING } = require("sequelize");
+const { DataTypes } = require("sequelize");
 
 module.exports = (app) => {
   const Users = app.db.define("Users", {
@@ -9,13 +9,6 @@ module.exports = (app) => {
       autoIncrement: true,
     },
     name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        notEmpty: true,
-      },
-    },
-    password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {

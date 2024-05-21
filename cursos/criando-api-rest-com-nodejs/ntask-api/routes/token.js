@@ -14,13 +14,12 @@ module.exports = (app) => {
         const where = { email };
         const user = await Users.findOne({ where });
 
-        if (bcrypt.compateSync(password, user.password)) {
+        if (bcrypt.compareSync(password, user.password)) {
           const payload = { id: user.id };
           const token = jwt.encode(payload, secret);
           return res.json({ token });
         }
       }
-
       return res.sendStatus(401);
     } catch (err) {
       return res.sendStatus(401);

@@ -3,7 +3,7 @@ module.exports = (app) => {
 
   app
     .route("/user")
-    .all(app.auth.authenticate)
+    .all(app.auth.authenticate())
     .get(async (req, res) => {
       try {
         const { id } = req.user;
