@@ -3,5 +3,6 @@ module.exports = (app) => {
   const Tasks = app.models.tasks;
 
   Users.hasMany(Tasks, { foreignKey: "userId" });
+  // Users.hasMany(Tasks);
   Tasks.belongsTo(Users, { foreignKey: "userId" });
 };

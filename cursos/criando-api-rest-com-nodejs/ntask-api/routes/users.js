@@ -7,10 +7,9 @@ module.exports = (app) => {
     .get(async (req, res) => {
       try {
         const { id } = req.user;
-        const attributes = ["id", "name", "email"];
+        const attributes = ['id', 'name', 'email'];
         const options = { attributes };
         const result = await Users.findByPk(id, options);
-
         if (result) {
           res.json(result);
         } else {

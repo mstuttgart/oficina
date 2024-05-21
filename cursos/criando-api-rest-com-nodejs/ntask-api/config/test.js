@@ -3,7 +3,7 @@ module.exports = {
     database: "ntask_test",
     username: "",
     password: "",
-    parmas: {
+    params: {
       dialect: "sqlite",
       storage: "ntask_test.sqlite",
       logging: false,

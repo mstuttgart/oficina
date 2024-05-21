@@ -15,7 +15,7 @@ module.exports = (app) => {
     })
     .post(async (req, res) => {
       try {
-        req.body.userId - req.user.id;
+        req.body.userId = req.user.id;
         const result = await Tasks.create(req.body);
         res.json(result);
       } catch (err) {
