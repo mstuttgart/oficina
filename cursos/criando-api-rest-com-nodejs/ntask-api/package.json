@@ -4,22 +4,37 @@
   "description": "API de gestão de tarefas",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "npm run apidoc && npm run clusters",
+    "server": "node index.js",
+    "clusters": "node clusters.js",
+    "apidoc": "apidoc -i routes/ -o public/apidoc",
     "test": "NODE_ENV=test mocha test/**/*.js"
+  },
+  "apidoc": {
+    "name": "Documentação = Node Task API",
+    "template": {
+      "forceLanguage": "pt_br"
+    }
   },
   "author": "Caio R. Pereira",
   "dependencies": {
     "bcrypt": "5.0.1",
     "body-parser": "1.19.2",
+    "compression": "1.7.4",
     "consign": "0.1.6",
+    "cors": "2.8.5",
     "express": "4.17.1",
+    "helmet": "4.6.0",
     "jwt-simple": "0.5.6",
+    "morgan": "1.10.0",
     "passport": "0.7.0",
     "passport-jwt": "4.0.0",
     "sequelize": "6.6.5",
-    "sqlite3": "5.0.2"
+    "sqlite3": "5.0.2",
+    "winston": "3.3.3"
   },
   "devDependencies": {
+    "apidoc": "0.29.0",
     "chai": "4.3.4",
     "mocha": "9.1.2",
     "supertest": "6.1.6"

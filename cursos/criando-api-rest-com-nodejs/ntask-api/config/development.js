@@ -1,3 +1,5 @@
+const logger = require("../logger");
+
 module.exports = {
   db: {
     database: "ntask",
@@ -6,6 +8,9 @@ module.exports = {
     params: {
       dialect: "sqlite",
       storage: "ntask.sqlite",
+      logging: (sql) => {
+        logger.info(`[${new Date()}] ${sql}`);
+      },
       define: {
         underscore: true,
       },
