@@ -15,4 +15,4 @@ Welcome to my workshop! This is where I test and study languages, frameworks and
 > [!IMPORTANT]
 > This repository contains projects and test codes developed during my studies. These projects can be used freely, however none of them are at an appropriate level to be used in a production environment or in a serious project.
 
-[![My Skills](https://skillicons.dev/icons?i=python,c,cpp,java,bash,elixir,js,html,css,ansible,godot)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=python,c,cpp,java,bash,elixir,js,rust,html,css,ansible,godot,docker)](https://skillicons.dev)
