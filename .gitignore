@@ -103,3 +103,4 @@ target/
 node_modules
 yarn-error.log
 
+arduino/libraries/*
