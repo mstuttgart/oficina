@@ -9,6 +9,7 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 
 // Pino do Sensor Touch
 const int PINO_TOUCH = 2;
+const int PINO_BUZZER = 8;
 
 // Parâmetros dos olhos estilo EMO
 const int EYE_W = 28;
@@ -43,6 +44,37 @@ int offsetY = 0;
 // Depois você pode mudar para 60000 (1 minuto) ou 120000 (2 minutos).
 const unsigned long TEMPO_PARA_DORMIR = 15000;
 const unsigned long DURACAO_CARINHO = 1500; // Fica 1.5s feliz após soltar o dedo
+
+// --- EFEITOS SONOROS CHIPTUNE (Sem bibliotecas pesadas) ---
+
+// Som curto e agudo de alegria ao receber carinho
+void somCarinho()
+{
+    tone(PINO_BUZZER, 1318, 50); // E6
+    delay(60);
+    tone(PINO_BUZZER, 1568, 50); // G6
+    delay(60);
+    tone(PINO_BUZZER, 2093, 80); // C7
+}
+
+// Som decrescente simulando bocejo / sono
+void somDormir()
+{
+    for (int freq = 1200; freq >= 400; freq -= 100)
+    {
+        tone(PINO_BUZZER, freq, 40);
+        delay(45);
+    }
+    noTone(PINO_BUZZER);
+}
+
+// Bipe duplo rápido e alegre ao acordar
+void somAcordar()
+{
+    tone(PINO_BUZZER, 1046, 60); // C6
+    delay(80);
+    tone(PINO_BUZZER, 1568, 100); // G6
+}
 
 // --- FUNÇÕES GRÁFICAS DE DESENHO ---
 
@@ -92,6 +124,7 @@ void setup()
 {
     Serial.begin(115200);
     pinMode(PINO_TOUCH, INPUT);
+    pinMode(PINO_BUZZER, OUTPUT);
 
     if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C))
     {
@@ -100,6 +133,8 @@ void setup()
     }
 
     display.clearDisplay();
+    somAcordar(); // Som de inicialização do robô
+
     ultimoToque = millis();
     proximaPiscada = millis() + 3000;
     proximoOlhar = millis() + 5000;
@@ -115,6 +150,7 @@ void loop()
     if (tocando)
     {
         ultimoToque = agora;
+        somAcordar();
         estadoAtual = CARINHO;
     }
     else
@@ -129,6 +165,7 @@ void loop()
         else if (estadoAtual == ACORDADO && (agora - ultimoToque > TEMPO_PARA_DORMIR))
         {
             estadoAtual = DORMINDO;
+            somDormir();
         }
     }
 
